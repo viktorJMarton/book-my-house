@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_111039) do
+ActiveRecord::Schema.define(version: 2023_02_07_134549) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "house_id"
+    t.integer "number_of_guests"
     t.index ["house_id"], name: "index_bookings_on_house_id"
   end
 
