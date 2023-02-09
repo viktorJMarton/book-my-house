@@ -4,4 +4,6 @@ class House < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   scope :ordered, -> { order(:name, :city) }
+
+
 end
