@@ -239,7 +239,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap-will_paginate (= 1.0.0)
+  bootstrap-will_paginate
   byebug
   capybara
   puma
@@ -256,7 +256,7 @@ DEPENDENCIES
   tzinfo
   tzinfo-data
   webdrivers
-  will_paginate (= 3.3.1)
+  will_paginate
 
 RUBY VERSION
    ruby 2.7.5p203

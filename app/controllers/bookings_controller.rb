@@ -1,10 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all.ordered
-    per_page = params[:per_page] ? params[:per_page].to_i : 4
-    
-    @bookings = Booking.paginate(page: params[:page], per_page:4)
-    @bookings = Booking.paginate(page: params[:page], per_page: per_page)
+    @bookings = Booking.paginate(page: params[:page], per_page: params[:per_page].presence || 4)
   end
 
   def new
