@@ -7,9 +7,12 @@ class HousesController < ApplicationController
 
   def show 
     @house = House.find(params[:id])
-    @bookings_list= @house.bookings.sort_by(&:day) if params[:order]=="asc" || !params[:order]
-    @bookings_list= @house.bookings.sort_by(&:day).reverse if params[:order]=="desc"
     
+    @bookings_list = if params[:order]=="desc"
+      @house.bookings.sort_by(&:day).reverse
+    else
+      @bookings_list= @house.bookings.sort_by(&:day)
+    end
 
   end
 
