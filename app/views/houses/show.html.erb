@@ -7,9 +7,4 @@
   <li><%= booking.day %></li>
 <% end %>
 </ul>
-<% if params[:order] == "asc" %>
-  <%= link_to "Change order", house_path(@house, :order=>"desc")%>
-<% else %>
-  <%= link_to "Change order", house_path(@house, :order=>"asc")%>
-<% end %>
-
+<%= link_to 'Change order', house_path(@house, order: params[:order] == 'asc' ? 'desc' : 'asc') %>
