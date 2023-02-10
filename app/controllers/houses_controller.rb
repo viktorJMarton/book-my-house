@@ -9,9 +9,9 @@ class HousesController < ApplicationController
     @house = House.find(params[:id])
     
     @bookings_list = if params[:order]=="desc"
-      @house.bookings.sort_by(&:day).reverse
+      @house.bookings.order(:day).reverse
     else
-      @house.bookings.sort_by(&:day)
+      @house.bookings.order(:day)
     end
   end
 
