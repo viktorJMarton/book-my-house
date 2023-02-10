@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :new, :create]
   resource :query, only: [:new, :create]
   resource :statistic, only: [:show]
-  resources :houses, only: [:show,:index]
+  resources :houses, only: [:show, :index]
 end
