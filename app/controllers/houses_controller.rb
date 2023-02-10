@@ -11,9 +11,8 @@ class HousesController < ApplicationController
     @bookings_list = if params[:order]=="desc"
       @house.bookings.sort_by(&:day).reverse
     else
-      @bookings_list= @house.bookings.sort_by(&:day)
+      @house.bookings.sort_by(&:day)
     end
-
   end
 
 end
