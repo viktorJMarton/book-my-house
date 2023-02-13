@@ -1,0 +1,10 @@
+
+
+<h1>Bookings for <%= @house.name %></h1>
+
+<ul id="list">
+<% @bookings_list.each do |booking| %>
+  <li><%= booking.day %></li>
+<% end %>
+</ul>
+<%= link_to 'Change order', house_path(@house, order: params[:order] == 'asc' ? 'desc' : 'asc') %>
