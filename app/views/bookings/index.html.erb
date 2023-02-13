@@ -11,10 +11,21 @@
 </p>
 
 <h2>The full list of bookings:</h2>
+
 <div class='bookings'>
   <% if @bookings.any? %>
     <%= render partial: 'bookings/booking', collection: @bookings %>
   <% else %>
     There is no booking yet.
   <% end %>
+</div>
+
+<div class="pagination-options">
+  <%= form_tag bookings_path, method: :get do %>
+    <%= select_tag :per_page, options_for_select([4, 6, 8, 12, 20], params[:per_page]), onchange: "this.form.submit()" %>
+  <% end %>
+</div>
+
+<div class="flickr_pagination">
+  <%= will_paginate container: true %>
 </div>

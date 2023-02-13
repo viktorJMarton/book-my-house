@@ -14,6 +14,8 @@ gem 'sass-rails'
 gem 'turbolinks'
 gem 'shakapacker'
 gem 'react-rails'
+gem "will_paginate"         
+gem "bootstrap-will_paginate"
 
 # Misc
 gem 'bootsnap', require: false
