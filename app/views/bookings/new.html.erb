@@ -10,6 +10,12 @@
     <%= f.label :day, 'Day of booking:' %>
     <%= f.date_select :day %>
   </p>
+  
+  <p>
+    <%= f.label :number_of_guests, 'Number of guests:' %>
+    <%= f.number_field :number_of_guests, in: 1..8 %>
+  </p>
+  
   <p>
     <%= f.label :house, 'Select a place:' %>
     <%= f.select :house_id, options_from_collection_for_select(House.ordered, :id, :name), include_blank: true %>
