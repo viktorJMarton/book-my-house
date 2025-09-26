@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Handle static assets
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+# Route everything through public/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]
