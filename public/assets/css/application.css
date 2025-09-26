@@ -1,0 +1,70 @@
+h1, h2, p, form, .bookings {
+ text-align: center;
+}
+
+.booking {
+ border: 1px solid;
+ display: inline-block;
+ margin: 1em;
+ padding: 1em;
+ width: fit-content;
+}
+
+#booked-result {
+ margin: 2em;
+ text-align: center;
+}
+
+[type='submit'] {
+ display: block;
+ margin: auto;
+ margin-top: 1em;
+}
+
+.error {
+ color: red;
+}
+
+.field_with_errors {
+ display: inline-block;
+}
+
+/* Additional styling for forms */
+form p {
+  margin: 1em 0;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type="date"], input[type="number"], select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #007cba;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #005a87;
+}
+
+a {
+  color: #007cba;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
